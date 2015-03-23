@@ -175,9 +175,25 @@ class TestNmapParser(unittest.TestCase):
         for p in plist:
             print(p)
 
+    def test_ssl_enum_ciphers(self):
+        dirname = os.path.dirname(os.path.realpath(__file__))
+        fname = os.path.join(dirname, 'files/ssl-enum-ciphers.xml')
+
+        report = NmapParser.parse_fromfile(fname)
+        for host in report.hosts:
+            for service in host.services:
+                for v in service.scripts_results:
+                    self.assertIsInstance(v, dict)
+                    for key, value in v['elements'].items():
+                        if isinstance(value, dict):
+                            ciphers = value.get('ciphers')
+                            if ciphers:
+                                self.assertIsInstance(ciphers, list)
+
+
 if __name__ == '__main__':
     test_suite = ['test_class_parser', 'test_class_ports_parser',
                   'test_class_port_parser', 'test_port_except',
-                  'test_parser_generic']
+                  'test_parser_generic', 'test_ssl_enum_ciphers']
     suite = unittest.TestSuite(map(TestNmapParser, test_suite))
     test_result = unittest.TextTestRunner(verbosity=2).run(suite)
