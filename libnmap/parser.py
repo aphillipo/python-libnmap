@@ -470,14 +470,17 @@ class NmapParser(object):
             d = {}
             l = []
             for el in data:
+                key = el.get('key')
                 if el.tag == 'elem':
-                    d[el.get('key')] = el.text
+                    value = el.text
                 elif el.tag == 'table':
-                    key = el.get('key')
-                    if key:
-                        d[key] = to_python(el)
-                    else:
-                        l.append(to_python(el))
+                    value = to_python(el)
+
+                if key:
+                    d[key] = value
+                else:
+                    l.append(value)
+
             return d or l
 
         _script_dict['elements'] = to_python(script_data)

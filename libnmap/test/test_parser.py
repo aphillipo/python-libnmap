@@ -190,6 +190,12 @@ class TestNmapParser(unittest.TestCase):
                             if ciphers:
                                 self.assertIsInstance(ciphers, list)
 
+                            compressors = value.get('compressors')
+                            if compressors:
+                                self.assertIsInstance(compressors, list)
+                                for c in compressors:
+                                    self.assertIsInstance(c, basestring)
+
 
 if __name__ == '__main__':
     test_suite = ['test_class_parser', 'test_class_ports_parser',
