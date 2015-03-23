@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 6.40 scan initiated Mon Mar 23 13:43:52 2015 as: nmap -oX ./libnmap/test/files/ssl-enum-ciphers.xml -&#45;script ssl-enum-ciphers -p 443 mail.yandex.com -->
+<nmaprun scanner="nmap" args="nmap -oX ./libnmap/test/files/ssl-enum-ciphers.xml -&#45;script ssl-enum-ciphers -p 443 mail.yandex.com" start="1427100232" startstr="Mon Mar 23 13:43:52 2015" version="6.40" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1427100232" endtime="1427100233"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="213.180.204.25" addrtype="ipv4"/>
+<hostnames>
+<hostname name="mail.yandex.com" type="user"/>
+<hostname name="mail.yandex.ru" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/><script id="ssl-enum-ciphers" output="&#xa;  SSLv3: No supported ciphers found&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA - strong&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA - strong&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA - strong&#xa;      TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA - strong&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA - strong&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA - strong&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA - strong&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA - strong&#xa;    compressors: &#xa;      NULL&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA - strong&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA - strong&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA - strong&#xa;      TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA - strong&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA - strong&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA - strong&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA - strong&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA - strong&#xa;    compressors: &#xa;      NULL&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA - strong&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA - strong&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 - strong&#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 - strong&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA - strong&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 - strong&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 - strong&#xa;      TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA - strong&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA - strong&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 - strong&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 - strong&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA - strong&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 - strong&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 - strong&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA - strong&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA - strong&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 - strong&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 - strong&#xa;    compressors: &#xa;      NULL&#xa;  least strength: strong"><table key="SSLv3">
+<table key="ciphers">
+</table>
+<table key="compressors">
+</table>
+</table>
+<table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+</table>
+<table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+</table>
+<table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="strength">strong</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+</table>
+<elem key="least strength">strong</elem>
+</script></port>
+</ports>
+<times srtt="26012" rttvar="14698" to="100000"/>
+</host>
+<runstats><finished time="1427100233" timestr="Mon Mar 23 13:43:53 2015" elapsed="1.63" summary="Nmap done at Mon Mar 23 13:43:53 2015; 1 IP address (1 host up) scanned in 1.63 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
