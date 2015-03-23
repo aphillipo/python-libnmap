@@ -466,16 +466,21 @@ class NmapParser(object):
         """
         _script_dict = cls.__format_attributes(script_data)
 
-        def to_dict(data):
+        def to_python(data):
             d = {}
+            l = []
             for el in data:
                 if el.tag == 'elem':
                     d[el.get('key')] = el.text
                 elif el.tag == 'table':
-                    d[el.get('key')] = to_dict(el)
-            return d
+                    key = el.get('key')
+                    if key:
+                        d[key] = to_python(el)
+                    else:
+                        l.append(to_python(el))
+            return d or l
 
-        _script_dict['elements'] = to_dict(script_data)
+        _script_dict['elements'] = to_python(script_data)
         return _script_dict
 
     @classmethod
